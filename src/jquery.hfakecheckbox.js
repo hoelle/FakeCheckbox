@@ -1,5 +1,5 @@
 /*
- hFakeCheckbox v0.1
+ hFakeCheckbox v0.2
  (c) 2014 Hoelle Development e.U. - hoelle.net
  license: http://www.opensource.org/licenses/mit-license.php
  */
@@ -11,11 +11,6 @@
 				var settings = $.extend({
 						// place default settings here
 					}, options),
-					inputCss = {
-						display: 'inline-block',
-						position: 'relative',
-						width: '100%'
-					},
 					checkboxCss = {
 						display: 'block',
 						position: 'absolute',
@@ -48,7 +43,7 @@
 						$this.replaceWith($container);
 
 						$checkbox.change(function (e) {
-							if ($(this).is(':checked')) {
+							if ($(this).prop('checked')) {
 								$container.addClass('checked');
 							}
 							else {
